@@ -43,7 +43,7 @@ export const Hero = () => {
             Daniel Lee
           </motion.h1>
           <motion.p className="hero-description" variants={fadeInUp}>
-            Computer Science major at Yale and Varsity Fencing Team member.
+            Computer Science major at Yale and Varsity Fencing Team Starter.
             Former SWE & PM intern at Arbol, aspiring web and backend developer
             passionate about building impactful digital products.
           </motion.p>
