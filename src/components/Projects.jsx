@@ -49,7 +49,7 @@ export const Projects = () => {
         >
           <motion.div
             className="project-image"
-            style={{ backgroundImage: "url('/projects/arbol.png')" }}
+            style={{ backgroundImage: "url('/projects/Yale-Bulldogs-Logo-1997.png')" }}
             whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
           />
           <h3> Yale Strength </h3>
