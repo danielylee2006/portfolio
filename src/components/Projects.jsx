@@ -70,16 +70,18 @@ export const Projects = () => {
           className="project-card"
           variants={fadeInUp}
           whileHover={{ y: -10, transition: { duration: 0.2 } }}
+          onClick={() => window.open("https://www.arbol.io/", "_blank")}
+          style={{cursor: "pointer"}}
         >
           <motion.div
             className="project-image"
-            style={{ backgroundImage: "url('/projects/arbol.png')" }}
+            style={{ backgroundImage: "url('/projects/arbol.jpeg')" }}
             whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
           />
           <h3> Insurance Program Dashboard </h3>
           <p>
             Full-stack internal Insurance Program Management Platform to
-            automate structured data extraction from insurance documents.
+            automate structured data extraction from insurance documents (2025 summer internship).
           </p>
           <div className="project-tech">
             <span>React</span>
