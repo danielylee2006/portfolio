@@ -43,16 +43,23 @@ export const Projects = () => {
           className="project-card"
           variants={fadeInUp}
           whileHover={{ y: -10, transition: { duration: 0.2 } }}
-          onClick={() => window.open("https://yale-strength.vercel.app", "_blank")}
-          style={{cursor: "pointer"}}
-
+          onClick={() =>
+            window.open("https://yale-strength.vercel.app", "_blank")
+          }
+          style={{ cursor: "pointer" }}
         >
           <motion.div
             className="project-image"
-            style={{ backgroundImage: "url('/projects/Yale-Bulldogs-Logo-1997.png')" }}
+            style={{
+              backgroundImage: "url('/projects/bulldogs.png')",
+              backgroundColor: "white",
+              backgroundSize: "50%",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+            }}
             whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
           />
-          <h3> Yale Strength </h3>
+          <h3> Yale Strength Tracking Platform</h3>
           <p>
             A full-stack web platform for tracking and ranking strength lifts
             (bench press, squat, deadlift) among Yale students and faculty.
@@ -71,7 +78,7 @@ export const Projects = () => {
           variants={fadeInUp}
           whileHover={{ y: -10, transition: { duration: 0.2 } }}
           onClick={() => window.open("https://www.arbol.io/", "_blank")}
-          style={{cursor: "pointer"}}
+          style={{ cursor: "pointer" }}
         >
           <motion.div
             className="project-image"
@@ -81,7 +88,8 @@ export const Projects = () => {
           <h3> Insurance Program Dashboard </h3>
           <p>
             Full-stack internal Insurance Program Management Platform to
-            automate structured data extraction from insurance documents (2025 summer internship).
+            automate structured data extraction from insurance documents (2025
+            summer internship).
           </p>
           <div className="project-tech">
             <span>React</span>
