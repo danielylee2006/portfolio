@@ -679,11 +679,11 @@ class Component extends DCLogic {
       isCareer: active === 'work-experience.tsx',
       notHome: active !== 'home.tsx' && active !== 'work-experience.tsx',
       careerRows: [
-        { title: 'SOFTWARE ENGINEER & CO-FOUNDER', org: 'Aria', date: 'NOW',
+        { title: 'SOFTWARE ENGINEER & CO-FOUNDER', org: 'Aria', date: 'Mar 2026 – Present',
           desc: 'Building an AI-powered iOS app for college students using Python, TypeScript, PostgreSQL and Celery, unifying classes, deadlines and calendars into a prioritized timeline. Developed 4 LLM-powered pipelines with Claude API, reducing projected AI inference cost by 55%.' },
-        { title: 'SOFTWARE ENGINEERING INTERN', org: 'Mylon AI', date: '2026',
+        { title: 'SOFTWARE ENGINEERING INTERN', org: 'Mylon AI', date: 'Jun 2026 – Aug 2026',
           desc: 'Deployed a RAG-based policy Q\u0026A platform using LlamaIndex and pgvector, reducing policy lookup time by 94%. Automated document ingestion converting PDF, DOCX and HTML into embeddings. Reduced hallucination risk by 88% with retrieval-aware fallback.' },
-        { title: 'SOFTWARE ENGINEERING INTERN', org: 'Arbol Inc.', date: '2025',
+        { title: 'SOFTWARE ENGINEERING INTERN', org: 'Arbol Inc.', date: 'May 2025 – Aug 2025',
           desc: 'Built an internal tool reading insurance contract PDFs and extracting terms, filling 82 fields in 40% less time than manual entry using AWS Textract and OpenAI. Engineered extraction prompts raising field accuracy 30% over manual entry.' },
       ].map((r, i) => {
         const on = this.state.revealed.includes(i);
