@@ -303,13 +303,13 @@
           <div style="display:{{ bs1 }};gap:24px"><span style="flex:none;color:#5a5f66">09:00:13</span><span><span style="color:#d7d38a">[stats]</span> <span style="color:#c9ced6">3 internships · 2 major projects · Yale CS &amp; Econ · full-stack + AI/ML</span></span></div>
           <div style="display:{{ bs2 }};gap:24px"><span style="flex:none;color:#5a5f66">09:00:13</span><span style="color:#4d9fff">[copilot] Loading Portfolio Copilot...</span></div>
           <div style="display:{{ bs3 }};height:16px"></div>
-          <div style="display:{{ bs3 }};gap:24px"><span style="flex:none;color:#5a5f66">09:00:14</span><span style="color:#7fbf7f">✓ Portfolio dev server ready in 389ms,you're inside the build.</span></div>
+          <div style="display:{{ bs3 }};gap:24px"><span style="flex:none;color:#5a5f66">09:00:14</span><span style="color:#7fbf7f">✓ Portfolio dev server ready in 389ms, you're inside the build.</span></div>
           <div style="display:{{ bs4 }};gap:24px"><span style="flex:none;color:#5a5f66">09:00:14</span><span><span style="color:#7fbf7f">&nbsp;&nbsp;➜</span>&nbsp; <span style="color:#c9ced6">Local:</span>&nbsp;&nbsp; <span style="color:#4d9fff">http://localhost:5173/</span></span></div>
           <div style="display:{{ bs5 }};gap:24px"><span style="flex:none;color:#5a5f66">09:00:14</span><span><span style="color:#7fbf7f">&nbsp;&nbsp;➜</span>&nbsp; <span style="color:#c9ced6">Status:</span>&nbsp; <span style="color:#8a9099">Open to opportunities &amp; collaboration</span></span></div>
-          <div style="display:{{ bs6 }};gap:24px"><span style="flex:none;color:#5a5f66">09:00:15</span><span><span style="color:#7fbf7f">&nbsp;&nbsp;➜</span>&nbsp; <span style="color:#c9ced6">Hint:</span>&nbsp;&nbsp;&nbsp; <span style="color:#8a9099">click sections in the explorer,or ask Copilot →</span></span></div>
+          <div style="display:{{ bs6 }};gap:24px"><span style="flex:none;color:#5a5f66">09:00:15</span><span><span style="color:#7fbf7f">&nbsp;&nbsp;➜</span>&nbsp; <span style="color:#c9ced6">Hint:</span>&nbsp;&nbsp;&nbsp; <span style="color:#8a9099">click sections in the explorer, or ask Copilot →</span></span></div>
           <div style="display:{{ bs7 }};margin-top:10px;padding-left:86px"><span style="color:#7fbf7f">daniel@portfolio</span><span style="color:#c9ced6">:</span><span style="color:#4d9fff">~/career</span><span style="color:#c9ced6">$ </span><span style="display:inline-block;width:9px;height:15px;background:#d4d4d4;vertical-align:-2px;animation:blink 1s step-end infinite"></span></div>
         </div>
-        <div style="flex:none;text-align:center;color:#5a5f66;font-size:11.5px;padding:6px 0 8px">Career timeline boot log,read-only · scroll the editor to explore</div>
+        <div style="flex:none;text-align:center;color:#5a5f66;font-size:11.5px;padding:6px 0 8px">Career timeline boot log, read-only · scroll the editor to explore</div>
       </div>
       </sc-if>
     </div>
@@ -328,7 +328,7 @@
       <div id="copilot-scroll" style="flex:1;min-height:0;overflow-y:auto;padding:18px">
         <div style="position:relative;background:#232323;border:1px solid #2e2e2e;border-radius:8px;padding:16px 44px 16px 16px;margin-bottom:22px">
           <div style="color:#f2f2f2;font-weight:700;font-size:13.5px;margin-bottom:8px">Hi! I'm Daniel Lee's Portfolio Copilot</div>
-          <div style="color:#aeb4bc;font-size:12.5px;line-height:1.8">Ask about work, career, skills, or availability,I'll jump you to the right section of this site.</div>
+          <div style="color:#aeb4bc;font-size:12.5px;line-height:1.8">Ask about work, career, skills, or availability, I'll jump you to the right section of this site.</div>
           <span style="position:absolute;top:12px;right:12px;color:#e2e529;font-size:20px">✳</span>
         </div>
         <sc-for list="{{ copilotChat }}" as="m" hint-placeholder-count="0">
@@ -478,12 +478,12 @@ class Component extends DCLogic {
   copilotAnswer(q) {
     const t = q.toLowerCase();
     let sec = null, reply;
-    if (/project|built|build|work(?!.*exper)|ship/.test(t)) { sec = 'sec-projects'; reply = "Here are Daniel's projects,LabLink (a lab equipment donation platform), AI Fencing Referee, and Aria (an AI-powered iOS assistant). Jumping you there now."; }
+    if (/project|built|build|work(?!.*exper)|ship/.test(t)) { sec = 'sec-projects'; reply = "Here are Daniel's projects, LabLink (a lab equipment donation platform), AI Fencing Referee, and Aria (an AI-powered iOS assistant). Jumping you there now."; }
     else if (/career|experience|role|job|journey/.test(t)) { sec = 'sec-work-experience'; reply = 'Daniel is co-founding Aria, previously interned at Mylon AI (RAG platform) and Arbol Inc. (document extraction). Taking you to the timeline.'; }
     else if (/skill|stack|tech|tool/.test(t)) { sec = 'sec-skills'; reply = 'The stack spans Python, TypeScript, React/Next.js, FastAPI, PyTorch, PostgreSQL, and cloud infra like Docker, Vercel, and GCP. Scrolling to skills.'; }
-    else if (/contact|email|reach|hire|avail/.test(t)) { sec = 'sec-contact'; reply = "Fastest way is email,daniel.lee.dyl27@yale.edu. He's open to opportunities and usually replies within a day. Here's the contact section."; }
-    else if (/about|daniel|who|tell/.test(t)) { sec = 'sec-home'; reply = 'Daniel Lee is a CS & Economics student at Yale building full-stack and AI systems,co-founder of Aria, builder of LabLink, and creator of an AI fencing referee. Back to the top.'; }
-    else reply = "I can help with Daniel's projects, career, skills, or how to contact him,try one of those, or email daniel.lee.dyl27@yale.edu.";
+    else if (/contact|email|reach|hire|avail/.test(t)) { sec = 'sec-contact'; reply = "Fastest way is email, daniel.lee.dyl27@yale.edu. He's open to opportunities and usually replies within a day. Here's the contact section."; }
+    else if (/about|daniel|who|tell/.test(t)) { sec = 'sec-home'; reply = 'Daniel Lee is a CS & Economics student at Yale building full-stack and AI systems, co-founder of Aria, builder of LabLink, and creator of an AI fencing referee. Back to the top.'; }
+    else reply = "I can help with Daniel's projects, career, skills, or how to contact him, try one of those, or email daniel.lee.dyl27@yale.edu.";
     const user = { text: q, align: 'flex-end', bg: '#20304a', border: '#2a4a74', color: '#e6eefc' };
     const bot = { text: reply, align: 'flex-start', bg: '#232323', border: '#2e2e2e', color: '#c9ced6' };
     this.setState(s => ({ copilotChat: s.copilotChat.concat([user, bot]), copilotInput: '' }), () => {
@@ -577,7 +577,7 @@ class Component extends DCLogic {
       cmCopilot: () => this.setState(s => ({ openMenu: null, copilotOpen: !s.copilotOpen })),
       cmTerminal: () => { this.setState({ openMenu: null }); this.setTerminal(!this.state.terminalOpen); },
       themeDark: () => { this.setState({ openMenu: null, theme: 'dark' }); },
-      themeLight: () => { this.setState({ openMenu: null, theme: 'light' }); this.showToast('Light+ enabled,welcome to the bright side ☀'); },
+      themeLight: () => { this.setState({ openMenu: null, theme: 'light' }); this.showToast('Light+ enabled, welcome to the bright side ☀'); },
       darkCheck: this.state.theme === 'dark' ? '✓' : '',
       lightCheck: this.state.theme === 'light' ? '✓' : '',
       themeFilter: this.state.theme === 'light' ? 'invert(1) hue-rotate(180deg)' : 'none',
@@ -616,7 +616,7 @@ class Component extends DCLogic {
           tools: ['Next.js', 'TypeScript', 'FastAPI', 'PostgreSQL', 'pgvector', 'Supabase', 'Playwright'] },
         { num: '02', file: 'fencing-referee.py', title: 'AI Fencing Referee', tagline: 'Computer vision for competitive fencing',
           quote: 'Trained PyTorch models reaching 72% right-of-way accuracy with a leakage-resistant ML pipeline.',
-          desc: 'Built an end-to-end computer vision pipeline to ingest competition footage, detect touch events and segment exchanges,auto-generating weak-supervision labels for 9,000+ clips and cutting manual annotation by 92%. Designed schema validation and negative controls reaching 96% agreement with human-verified labels.',
+          desc: 'Built an end-to-end computer vision pipeline to ingest competition footage, detect touch events and segment exchanges, auto-generating weak-supervision labels for 9,000+ clips and cutting manual annotation by 92%. Designed schema validation and negative controls reaching 96% agreement with human-verified labels.',
           tools: ['Python', 'PyTorch', 'OpenCV', 'scikit-learn', 'NumPy'] },
       ].map((p, i) => {
         const on = this.state.revealedProjects.includes(i);
@@ -644,7 +644,7 @@ class Component extends DCLogic {
       notHome: active !== 'home.tsx' && active !== 'work-experience.tsx',
       careerRows: [
         { title: 'SOFTWARE ENGINEER & CO-FOUNDER', org: 'Aria', date: 'NOW',
-          desc: 'Building an AI-powered iOS app for college students using Python, TypeScript, PostgreSQL and Celery,unifying classes, deadlines and calendars into a prioritized timeline. Developed 4 LLM-powered pipelines with Claude API, reducing projected AI inference cost by 55%.' },
+          desc: 'Building an AI-powered iOS app for college students using Python, TypeScript, PostgreSQL and Celery, unifying classes, deadlines and calendars into a prioritized timeline. Developed 4 LLM-powered pipelines with Claude API, reducing projected AI inference cost by 55%.' },
         { title: 'SOFTWARE ENGINEERING INTERN', org: 'Mylon AI', date: '2026',
           desc: 'Deployed a RAG-based policy Q\u0026A platform using LlamaIndex and pgvector, reducing policy lookup time by 94%. Automated document ingestion converting PDF, DOCX and HTML into embeddings. Reduced hallucination risk by 88% with retrieval-aware fallback.' },
         { title: 'SOFTWARE ENGINEERING INTERN', org: 'Arbol Inc.', date: '2025',
