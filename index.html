@@ -284,7 +284,7 @@
             <a href="https://github.com/danielylee2006" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:10px;border:1px solid #3a3a3a;color:#e6e6e6;font-weight:700;letter-spacing:1px;padding:16px 34px;border-radius:6px" style-hover="background:#2a2a2a;color:#ffffff"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.7 1.2 3.3.9.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0C17 4.9 18 5.2 18 5.2c.6 1.6.2 2.8.1 3.1.7.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6a11.5 11.5 0 0 0 7.9-10.9C23.5 5.6 18.4.5 12 .5z"></path></svg>&nbsp;GITHUB</a>
             <a href="https://www.linkedin.com/in/daniel-lee-2b1474326/" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:10px;border:1px solid #3a3a3a;color:#e6e6e6;font-weight:700;letter-spacing:1px;padding:16px 34px;border-radius:6px" style-hover="background:#2a2a2a;color:#ffffff"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.5c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V21H9z"></path></svg>&nbsp;LINKEDIN</a>
           </div>
-          <div style="margin-top:70px;color:#5a5f66;font-size:12.5px;letter-spacing:1px">© 2026 DANIEL LEE — BUILT WITH ☕ AND TOO MANY TABS</div>
+          <div style="margin-top:70px;color:#5a5f66;font-size:12.5px;letter-spacing:1px">© 2026 DANIEL LEE</div>
         </div>
       </div>
       <sc-if value="{{ terminalOpen }}" hint-placeholder-val="{{ false }}">
@@ -524,7 +524,7 @@ class Component extends DCLogic {
         ['PyTorch', cdn('pytorch')], ['scikit-learn', cdn('scikitlearn')], ['OpenCV', cdn('opencv')],
         ['NumPy', cdn('numpy')], ['LlamaIndex', this.glyph('🦙', '#7fbf7f')], ['LangChain', cdn('langchain/ffffff')],
         ['GitHub Actions', cdn('githubactions')], ['Playwright', this.glyph('🎭', '#45ba4b')],
-        ['VS Code', cdn('visualstudiocode')], ['Claude Code', this.glyph('✦', '#d97706')],
+        ['VS Code', this.glyph('⌨', '#007ACC')], ['Claude Code', this.glyph('✦', '#d97706')],
       ]],
     ];
     this._skillRows = rows.map(([label, dur, dir, list]) => ({
