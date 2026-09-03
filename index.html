@@ -617,10 +617,6 @@ class Component extends DCLogic {
           quote: 'Trained PyTorch models reaching 72% right-of-way accuracy with a leakage-resistant ML pipeline.',
           desc: 'Built an end-to-end computer vision pipeline to ingest competition footage, detect touch events and segment exchanges — auto-generating weak-supervision labels for 9,000+ clips and cutting manual annotation by 92%. Designed schema validation and negative controls reaching 96% agreement with human-verified labels.',
           tools: ['Python', 'PyTorch', 'OpenCV', 'scikit-learn', 'NumPy'] },
-        { num: '03', file: 'aria.ts', title: 'Aria', tagline: 'AI-powered iOS assistant for college students',
-          quote: 'An intelligent timeline that unifies classes, deadlines and calendars — saving ~30 min/day of context-switching.',
-          desc: 'Co-founded and built an iOS app with Python, TypeScript, PostgreSQL and Celery. Developed 4 LLM-powered pipelines for document parsing, briefings, email classification and task management. Engineered integrations across Canvas, Google Calendar, Gmail and Twilio with OAuth 2.0 and Google Cloud Pub/Sub.',
-          tools: ['Python', 'TypeScript', 'PostgreSQL', 'Celery', 'Redis', 'Claude API', 'Docker', 'React Native'] },
       ].map((p, i) => {
         const on = this.state.revealedProjects.includes(i);
         return Object.assign({}, p, {
