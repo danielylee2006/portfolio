@@ -507,24 +507,24 @@ class Component extends DCLogic {
   }
   skillRows() {
     if (this._skillRows) return this._skillRows;
-    const cdn = s => 'https://cdn.simpleicons.org/' + s;
+    const cdn = s => 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/' + s + '-original.svg';
     const rows = [
       ['LANGUAGES + FRONTEND', '42s', '', [
-        ['Python', cdn('python')], ['TypeScript', cdn('typescript')], ['JavaScript', cdn('javascript')],
-        ['SQL', this.glyph('⊞', '#e8b96b')], ['HTML/CSS', cdn('html5')], ['C', this.glyph('C', '#5599dd')],
-        ['R', cdn('r')], ['React', cdn('react')], ['Next.js', cdn('nextdotjs/ffffff')], ['React Native', cdn('react')],
+        ['Python', cdn('python/python')], ['TypeScript', cdn('typescript/typescript')], ['JavaScript', cdn('javascript/javascript')],
+        ['SQL', this.glyph('⊞', '#e8b96b')], ['HTML/CSS', cdn('html5/html5')], ['C', cdn('c/c')],
+        ['R', cdn('r/r')], ['React', cdn('react/react')], ['Next.js', cdn('nextjs/nextjs')], ['React Native', cdn('react/react')],
       ]],
       ['BACKEND + INFRA', '48s', ' reverse', [
-        ['FastAPI', cdn('fastapi')], ['Node.js', cdn('nodedotjs')], ['Celery', this.glyph('⚙', '#a9cc54')],
-        ['PostgreSQL', cdn('postgresql')], ['pgvector', this.glyph('⊹', '#336791')], ['Supabase', cdn('supabase')],
-        ['Redis', cdn('redis')], ['Docker', cdn('docker')], ['Vercel', cdn('vercel/ffffff')],
-        ['Railway', this.glyph('▣', '#a855f7')], ['GCP', cdn('googlecloud')], ['Git', cdn('git')],
+        ['FastAPI', cdn('fastapi/fastapi')], ['Node.js', cdn('nodejs/nodejs')], ['Celery', this.glyph('⚙', '#a9cc54')],
+        ['PostgreSQL', cdn('postgresql/postgresql')], ['pgvector', this.glyph('⊹', '#336791')], ['Supabase', cdn('supabase/supabase')],
+        ['Redis', cdn('redis/redis')], ['Docker', cdn('docker/docker')], ['Vercel', cdn('vercel/vercel')],
+        ['Railway', this.glyph('▣', '#a855f7')], ['GCP', cdn('googlecloud/googlecloud')], ['Git', cdn('git/git')],
       ]],
       ['AI/ML + TOOLS', '44s', '', [
-        ['PyTorch', cdn('pytorch')], ['scikit-learn', cdn('scikitlearn')], ['OpenCV', cdn('opencv')],
-        ['NumPy', cdn('numpy')], ['LlamaIndex', this.glyph('🦙', '#7fbf7f')], ['LangChain', cdn('langchain/ffffff')],
-        ['GitHub Actions', cdn('githubactions')], ['Playwright', this.glyph('🎭', '#45ba4b')],
-        ['VS Code', this.glyph('⌨', '#007ACC')], ['Claude Code', this.glyph('✦', '#d97706')],
+        ['PyTorch', cdn('pytorch/pytorch')], ['scikit-learn', cdn('scikitlearn/scikitlearn')], ['OpenCV', cdn('opencv/opencv')],
+        ['NumPy', cdn('numpy/numpy')], ['LlamaIndex', this.glyph('🦙', '#7fbf7f')], ['LangChain', this.glyph('🦜', '#1C3C3C')],
+        ['GitHub Actions', cdn('githubactions/githubactions')], ['Playwright', cdn('playwright/playwright')],
+        ['VS Code', cdn('vscode/vscode')], ['Claude Code', this.glyph('✦', '#d97706')],
       ]],
     ];
     this._skillRows = rows.map(([label, dur, dir, list]) => ({
