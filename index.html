@@ -62,7 +62,20 @@
           </div>
         </sc-if>
       </div>
-      <span style="padding:4px 12px;cursor:default;border-radius:4px" style-hover="background:#2a2a2a;color:#e6e6e6">View</span>
+      <div style="position:relative">
+        <span onClick="{{ menuView }}" style="display:block;padding:4px 12px;cursor:pointer;border-radius:4px" style-hover="background:#2a2a2a;color:#e6e6e6">View</span>
+        <sc-if value="{{ viewOpen }}" hint-placeholder-val="{{ false }}">
+          <div style="position:absolute;top:calc(100% + 8px);left:0;width:300px;background:#252526;border:1px solid #3a3a3a;border-radius:8px;padding:8px;box-shadow:0 14px 44px rgba(0,0,0,0.65);z-index:100;white-space:normal">
+            <div style="padding:8px 12px;color:#8a9099;letter-spacing:3px;font-size:11px">SECTIONS</div>
+            <div onClick="{{ vmHome }}" style="padding:9px 12px;border-radius:5px;cursor:pointer" style-hover="background:#2f2f2f"><div style="color:#e6e6e6;font-size:13px">Home</div><div style="color:#8a9099;font-size:12px;margin-top:3px">Hero and introduction</div></div>
+            <div onClick="{{ vmExperience }}" style="padding:9px 12px;border-radius:5px;cursor:pointer" style-hover="background:#2f2f2f"><div style="color:#e6e6e6;font-size:13px">Work Experience</div><div style="color:#8a9099;font-size:12px;margin-top:3px">Career timeline</div></div>
+            <div onClick="{{ vmProjects }}" style="padding:9px 12px;border-radius:5px;cursor:pointer" style-hover="background:#2f2f2f"><div style="color:#e6e6e6;font-size:13px">Projects</div><div style="color:#8a9099;font-size:12px;margin-top:3px">LabLink, AI Fencing Referee</div></div>
+            <div onClick="{{ vmSkills }}" style="padding:9px 12px;border-radius:5px;cursor:pointer" style-hover="background:#2f2f2f"><div style="color:#e6e6e6;font-size:13px">Skills</div><div style="color:#8a9099;font-size:12px;margin-top:3px">Languages, frameworks, tools</div></div>
+            <div onClick="{{ vmResume }}" style="padding:9px 12px;border-radius:5px;cursor:pointer" style-hover="background:#2f2f2f"><div style="color:#e6e6e6;font-size:13px">Resume</div><div style="color:#8a9099;font-size:12px;margin-top:3px">Preview PDF in editor</div></div>
+            <div onClick="{{ vmContact }}" style="padding:9px 12px;border-radius:5px;cursor:pointer" style-hover="background:#2f2f2f"><div style="color:#e6e6e6;font-size:13px">Contact</div><div style="color:#8a9099;font-size:12px;margin-top:3px">Email, GitHub, LinkedIn</div></div>
+          </div>
+        </sc-if>
+      </div>
       <span onClick="{{ menuTerminal }}" style="padding:4px 12px;cursor:pointer;border-radius:4px" style-hover="background:#2a2a2a;color:#e6e6e6">Terminal</span>
       <span onClick="{{ menuHelp }}" style="padding:4px 12px;cursor:pointer;border-radius:4px" style-hover="background:#2a2a2a;color:#e6e6e6">Help</span>
       <div style="position:relative">
@@ -544,11 +557,19 @@ class Component extends DCLogic {
     return {
       fileOpen: this.state.openMenu === 'file',
       controlOpen: this.state.openMenu === 'control',
+      viewOpen: this.state.openMenu === 'view',
       themeOpen: this.state.openMenu === 'theme',
       anyMenuOpen: this.state.openMenu !== null,
       closeMenus: () => this.setState({ openMenu: null }),
       menuFile: () => this.setState(s => ({ openMenu: s.openMenu === 'file' ? null : 'file' })),
       menuControl: () => this.setState(s => ({ openMenu: s.openMenu === 'control' ? null : 'control' })),
+      menuView: () => this.setState(s => ({ openMenu: s.openMenu === 'view' ? null : 'view' })),
+      vmHome: () => { this.setState({ openMenu: null }); this.scrollToSec('sec-home'); },
+      vmExperience: () => { this.setState({ openMenu: null }); this.scrollToSec('sec-work-experience'); },
+      vmProjects: () => { this.setState({ openMenu: null }); this.scrollToSec('sec-projects'); },
+      vmSkills: () => { this.setState({ openMenu: null }); this.scrollToSec('sec-skills'); },
+      vmResume: () => { this.setState({ openMenu: null }); this.scrollToSec('sec-resume'); },
+      vmContact: () => { this.setState({ openMenu: null }); this.scrollToSec('sec-contact'); },
       menuTheme: () => this.setState(s => ({ openMenu: s.openMenu === 'theme' ? null : 'theme' })),
       menuTerminal: () => { this.setState({ openMenu: null }); this.setTerminal(!this.state.terminalOpen); },
       menuHelp: () => this.setState({ openMenu: null, copilotOpen: true }),
